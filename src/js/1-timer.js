@@ -13,6 +13,8 @@ const input = document.querySelector('#datetime-picker');
 let userSelectedDate = null;
 let intervalId = null;
 
+startBtn.disabled = true;
+
 const options = {
   enableTime: true,
   time_24hr: true,
