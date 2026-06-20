@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1 – Countdown Timer</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        gap: 24px;
+        background: #1a1a2e;
+        color: #eee;
+      }
+
+      .controls {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      #datetime-picker {
+        padding: 8px 12px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid #4e75ff;
+        background: #16213e;
+        color: #eee;
+        cursor: pointer;
+      }
+
+      button[data-start] {
+        padding: 8px 20px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: none;
+        background: #4e75ff;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      button[data-start]:disabled {
+        background: #555;
+        cursor: not-allowed;
+      }
+
+      button[data-start]:not(:disabled):hover {
+        background: #3a5cd4;
+      }
+
+      .timer {
+        display: flex;
+        gap: 24px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .value {
+        font-size: 48px;
+        font-weight: 700;
+        background: #16213e;
+        border-radius: 8px;
+        padding: 12px 16px;
+        min-width: 90px;
+        text-align: center;
+        color: #4e75ff;
+        letter-spacing: 2px;
+      }
+
+      .label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #aaa;
+      }
+    </style>
+    <script type="module" crossorigin src="/goit-js-hw-10/assets/timer-d2hyaami.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/iziToast.min-C_TXHEWZ.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/iziToast-BFQQRvTW.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/timer-CveviJq_.css">
+  </head>
+  <body>
+    <h1>Countdown Timer</h1>
+
+    <div class="controls">
+      <input type="text" id="datetime-picker" />
+      <button type="button" data-start disabled>Start</button>
+    </div>
+
+    <div class="timer">
+      <div class="field">
+        <span class="value" data-days>00</span>
+        <span class="label">Days</span>
+      </div>
+      <div class="field">
+        <span class="value" data-hours>00</span>
+        <span class="label">Hours</span>
+      </div>
+      <div class="field">
+        <span class="value" data-minutes>00</span>
+        <span class="label">Minutes</span>
+      </div>
+      <div class="field">
+        <span class="value" data-seconds>00</span>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
+
+  </body>
+</html>
